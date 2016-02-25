@@ -1,15 +1,13 @@
 <div class="container">
   <div class="row">
-    <div ng-repeat='movie in movies'>
-      console.log({{movie}})
+    <div class='col-md-6 test' ng-repeat='movie in movies'>
       <a href="/{{movie.imdbID}}/show">
-        <p>{{movie.Title}}</p>
-      <p>{{movie.Year}}</p>
+        <span><h4>{{movie.Title}} | Year: {{movie.Year}}</h4></span>
       </a>
+      <!-- NO RESULTS FOUND -->
+      <div class='none' ng-if="movie.Response ==='False'">
+        {{movie.Error}}
+      </div>
     </div>
   </div> <!--row-->
 </div> <!--container-->
-
- <!-- <div ng-view></div> -->
-<!-- <div ng-include="'partials/single.html'"></div> -->
-<!-- <a href="/{{search}}/results"> -->

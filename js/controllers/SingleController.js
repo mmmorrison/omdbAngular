@@ -1,5 +1,8 @@
-app.controller('SingleController', function($scope, $http){
-console.log('single page');
+app.controller('SingleController', ['$scope', '$routeParams', 'MyService', function($scope, $routeParams, MyService){
+  movieID = $routeParams.movieID;
 
-
-})
+    MyService.oneMovie(movieID).then(function(data) {
+        $scope.movie = data.data;
+      
+    })
+}])
