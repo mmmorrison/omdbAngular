@@ -1,0 +1,11 @@
+<div class="container" ng-controller='ResultsController'>
+  <div class="row">
+    <div ng-repeat='movies in payload'>
+      <a href='/#/single' ng-model='single'>{{movies.Title}}</a>
+      <p>{{movies.Year}}</p>
+    </div>
+  </div> <!--row-->
+</div> <!--container-->
+
+ <div ng-view></div>
+<!-- <div ng-include="'partials/single.html'"></div> -->

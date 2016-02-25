@@ -4,8 +4,8 @@ app.controller('MainController', function($scope, $http){
     $http.get("http://www.omdbapi.com/?s=" + $scope.search)
     .then(function(data){
       $scope.payload = data.data.Search;
+
       
-      console.log($scope.payload);
     })
   }
 })

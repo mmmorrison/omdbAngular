@@ -2,9 +2,9 @@ var app = angular.module("myApp", ['ngRoute']);
 
 app.config(function($routeProvider){
   $routeProvider
-    .when('/results', {
-      templateUrl: 'partials/results.html',
-      controller: 'resultsController'
+    .when('/single', {
+      templateUrl: 'partials/single.html',
+      controller: 'SingleController'
     })
     .otherwise('/');
 });

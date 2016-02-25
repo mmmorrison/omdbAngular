@@ -29,35 +29,21 @@
       <h3 class='text-center'>Angular OMDb API Search</h3>
 
       <!-- FORM -->
-      <form name='seachForm' ng-submit='hitAPI()'>
+      <form name='seachForm' ng-submit='hitAPI(this)'>
         <fieldset class="form-group text-center">
-          <label for="title">Enter a movie title</label>
+          <!-- <label for="title">Enter a movie title</label> -->
           <input type="text" class="form-control span3" placeholder="enter a movie title" ng-model='search' required>
         </fieldset>
 
         <fieldset class='form-group'>
-          <button type='submit' class="btn btn-primary"><span class='glyphicon glyphicon-search'></span></button>
+          <button type='submit' class="btn btn-primary col-xs-2 col-xs-offset-5"><span class='glyphicon glyphicon-search'></span></button>
         </fieldset>
       </form>
   </div>
     </div> <!--row-->
   </div> <!--container-->
 
-  <div class="container">
-    <div class="row">
-      <ul ng-repeat='movie in payload'>
-        <li>{{movie.Title}}</li>
-        <img ng-src="{{movie.Poster}}">
-      </ul>
-    </div> <!--row-->
-  </div> <!--container-->
-
-
-
-
-
-
-
+  <div ng-include="'partials/results.html'"></div>
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
@@ -66,6 +52,9 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
   <script src='js/app.js'></script>
   <script src='js/controllers/maincontroller.js'></script>
+  <script src='js/controllers/ResultsController.js'></script>
+  <script src='js/controllers/Singlecontroller.js'></script>
+
 
 </body>
 </html>
