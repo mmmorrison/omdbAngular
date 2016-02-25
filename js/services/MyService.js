@@ -4,7 +4,7 @@ app.service('MyService', ['$http', function($http) {
        return $http.get("http://www.omdbapi.com/?s=" + search);
     },
     oneMovie: function(movieID) {
-      return $http.get("http://www.omdbapi.com/?i=" + movieID);
+      return $http.get("http://www.omdbapi.com/?i=" + movieID + "&plot=full");
     }
   }
 }]);
