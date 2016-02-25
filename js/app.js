@@ -6,5 +6,9 @@ app.config(function($routeProvider){
       templateUrl: 'partials/single.html',
       controller: 'SingleController'
     })
+    .when("/results", {
+      templateUrl: 'partials/results.html',
+      controller: 'ResultsController'
+    })
     .otherwise('/');
 });
