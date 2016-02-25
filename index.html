@@ -29,14 +29,14 @@
       <h3 class='text-center'>Angular OMDb API Search</h3>
 
       <!-- FORM -->
-      <form name='seachForm'>
+      <form name='seachForm' ng-submit='fetch()'>
         <fieldset class="form-group text-center">
           <label for="title">Enter a movie title</label>
-          <input type="text" class="form-control span3" placeholder="enter a movie title" ng-model='title' required>
+          <input type="text" class="form-control span3" placeholder="enter a movie title" ng-model='search' required>
         </fieldset>
 
         <fieldset class='form-group'>
-          <button class="btn btn-primary"><span class='glyphicon glyphicon-search'></span></button>
+          <button type='submit' class="btn btn-primary"><span class='glyphicon glyphicon-search'></span></button>
         </fieldset>
       </form>
   </div>
@@ -45,7 +45,7 @@
 
   <div class="container">
     <div class="row">
-      <p>{{test}}</p>
+    {{response.data}}
     </div> <!--row-->
   </div> <!--container-->
 

@@ -1,6 +1,10 @@
 app.controller('MainController', function($scope, $http){
-  $http.get('http://www.omdbapi.com/?s').then(function(data){
-      $scope.stuff = data;
-      $scope.test = 'WORKED!!!!!'
-  });
-});
+
+  $scope.fetch = function(){
+    $http.get("http://www.omdbapi.com/?s=" + $scope.search)
+    .then(function(data){
+      $scope.payload = data;
+      console.log($scope.payload);
+    })
+  }
+})
