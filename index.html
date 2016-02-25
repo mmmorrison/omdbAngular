@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body ng-controller='MainController'>
+<body data-ng-controller='MainController'>
 
   <nav class="navbar navbar-inverse navbar-fixed-top">
        <div class="container">
@@ -29,11 +29,17 @@
       <h3 class='text-center'>Angular OMDb API Search</h3>
 
       <!-- FORM -->
-      <form name='seachForm' ng-submit='hitAPI(this)'>
+      <form name='seachForm' ng-submit='hitAPI()'>
         <fieldset class="form-group text-center">
           <!-- <label for="title">Enter a movie title</label> -->
-          <input type="text" class="form-control span3" placeholder="enter a movie title" ng-model='search' required>
+          <input type="text" class="form-control span3" placeholder="enter a movie title" ng-model='myservice' required>
         </fieldset>
+
+
+
+
+
+
 
         <fieldset class='form-group'>
           <button type='submit' class="btn btn-primary col-xs-2 col-xs-offset-5"><span class='glyphicon glyphicon-search'></span></button>
