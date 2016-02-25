@@ -1,12 +1,13 @@
 var app = angular.module("myApp", ['ngRoute']);
 
-app.config(function($routeProvider){
+app.config(function($locationProvider, $routeProvider){
+  $locationProvider.html5Mode(true);
   $routeProvider
-    .when('/single', {
+    .when('/:movieID/show', {
       templateUrl: 'partials/single.html',
       controller: 'SingleController'
     })
-    .when("/results", {
+    .when("/:movieTitle/results", {
       templateUrl: 'partials/results.html',
       controller: 'ResultsController'
     })
