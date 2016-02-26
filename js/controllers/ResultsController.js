@@ -3,6 +3,5 @@ app.controller('ResultsController', ['$scope', '$routeParams', 'MyService', func
 
     MyService.getter(movieTitle).then(function (data) {
       $scope.movies = data.data.Search;
-      console.log($scope.movies);
     })
 }])
