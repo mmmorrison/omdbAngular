@@ -1,0 +1,19 @@
+{
+  "name": "omdb_angular",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmmorrison/omdbAngular.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mmmorrison/omdbAngular/issues"
+  },
+  "homepage": "https://github.com/mmmorrison/omdbAngular#readme"
+}
