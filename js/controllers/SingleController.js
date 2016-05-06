@@ -3,6 +3,6 @@ app.controller('SingleController', ['$scope', '$routeParams', 'MyService', funct
 
     MyService.oneMovie(movieID).then(function(data) {
         $scope.movie = data.data;
-      
+      console.log($scope.movie);
     })
 }])
