@@ -4,11 +4,11 @@ app.config(function($locationProvider, $routeProvider){
   $locationProvider.html5Mode(true);
   $routeProvider
     .when('/:movieID/show', {
-      templateUrl: 'partials/single.html',
+      templateUrl: 'omdbAngular/partials/single.html',
       controller: 'SingleController'
     })
     .when("/:movieTitle/results", {
-      templateUrl: 'partials/results.html',
+      templateUrl: 'omdbAngular/partials/results.html',
       controller: 'ResultsController'
     })
     .otherwise('/');
